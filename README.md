@@ -1,25 +1,11 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # TestGuru app
+
+Проект предназначен для создания, управления и выполнения различных тестов.
+
+В проекте используются следующие сущности:
+
+    * Тест (Test)
+
+    * Пользователь (User)
+
+Пользователи с ролью администратор могут создавать, редактировать и удалять тесты. Пользователи(отсутствует роль администратор) могут выбирать и выполнять тесты.
