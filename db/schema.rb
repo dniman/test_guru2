@@ -14,11 +14,11 @@ ActiveRecord::Schema.define(version: 2023_09_22_115458) do
 
   create_table "answers", force: :cascade do |t|
     t.string "body"
-    t.integer "questions_id", null: false
+    t.integer "question_id", null: false
     t.boolean "correct", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["questions_id"], name: "index_answers_on_questions_id"
+    t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -29,21 +29,19 @@ ActiveRecord::Schema.define(version: 2023_09_22_115458) do
 
   create_table "questions", force: :cascade do |t|
     t.string "body"
-    t.integer "tests_id", null: false
+    t.integer "test_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["tests_id"], name: "index_questions_on_tests_id"
+    t.index ["test_id"], name: "index_questions_on_test_id"
   end
 
   create_table "tests", force: :cascade do |t|
     t.string "title"
     t.integer "level", default: 1, null: false
-    t.integer "categories_id", null: false
-    t.integer "users_id", null: false
+    t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["categories_id"], name: "index_tests_on_categories_id"
-    t.index ["users_id"], name: "index_tests_on_users_id"
+    t.index ["category_id"], name: "index_tests_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|

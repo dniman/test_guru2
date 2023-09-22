@@ -2,7 +2,7 @@ class CreateAnswers < ActiveRecord::Migration[6.1]
   def change
     create_table :answers do |t|
       t.string :body
-      t.references :questions, null: false
+      t.references :question, null: false
       t.boolean :correct, null: false, default: false
 
       t.timestamps
